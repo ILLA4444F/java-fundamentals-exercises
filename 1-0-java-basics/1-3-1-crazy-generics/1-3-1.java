@@ -1,50 +1,50 @@
 class Box<T> {
-    частное значение T;
+    private T value;
 
     public void set(T value) {
-        это.значение = значение;
+        this.value = value;
     }
 
     public T get() {
-        возвращаемое значение;
+        return value;
     }
 }
 
 class NumericBox<T extends Number> {
-    частный номер T;
+    private T number;
 
     public void set(T number) {
         this.number = number;
     }
 
     public T get() {
-        номер возврата;
+        return number;
     }
 }
 
 class Pair<K, V> {
-    закрытый ключ K;
-    частное значение V;
+    private K key;
+    private V value;
 
     public Pair(K key, V value) {
         this.key = key;
-        это.значение = значение;
+        this.value = value;
     }
 
     public K getKey() {
-        клавиша возврата;
+        return key;
     }
 
     public V getValue() {
-        возвращаемое значение;
+        return value;
     }
 }
 
 class ComparableBox<T extends Comparable<T>> {
-    частное значение T;
+    private T value;
 
     public ComparableBox(T value) {
-        это.значение = значение;
+        this.value = value;
     }
 
     public boolean isGreaterThan(T other) {
@@ -52,7 +52,7 @@ class ComparableBox<T extends Comparable<T>> {
     }
 }
 
-класс Utils {
+class Utils {
     public static <T> void printArray(T[] array) {
         for (T element : array) {
             System.out.print(element + " ");
@@ -69,6 +69,11 @@ class WildcardDemo {
 
 class BoundedWildcardDemo {
     public static void sumNumbers(NumericBox<? extends Number> box) {
-        System.out.println("Число: " + box.get());
+        System.out.println("Number: " + box.get());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
     }
 }
